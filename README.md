@@ -1,5 +1,13 @@
 # MyStore Project Overview
 
+Bootstrap notes:
+- Local repo: `fullstack/udangular`
+- Target remote: `git@github.com:devin-thomas/udangular.git`
+- Course: Angular Fundamentals
+- Starter source from the course PDF: `https://github.com/udacity/nd-0067-c3-angular-fundamentals-project-starter`
+- The course starter is asset-only. It provides styles, sample data, and supporting files that are meant to be merged into a separately scaffolded Angular CLI app.
+- This repository currently contains only those starter materials and bootstrap publishing setup. No Angular application scaffold or feature implementation has been added yet.
+
 MyStore is Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process. 
 
 ## Getting Started
