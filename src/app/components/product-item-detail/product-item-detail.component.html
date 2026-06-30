@@ -1,0 +1,31 @@
+<section *ngIf="product; else missingProduct" class="detail-container">
+  <img [src]="product.url" [alt]="product.name">
+
+  <div class="detail-item">
+    <a class="back-link" routerLink="/">Back to products</a>
+    <p class="detail-price">{{ product.price | currency }}</p>
+    <h1>{{ product.name }}</h1>
+    <p class="detail-description">{{ product.description }}</p>
+
+    <label class="detail-label" for="detail-quantity">Quantity</label>
+    <input
+      id="detail-quantity"
+      class="select-input"
+      type="number"
+      min="1"
+      max="10"
+      [(ngModel)]="quantity"
+      (ngModelChange)="onQuantityChange($event)">
+
+    <div class="detail-actions">
+      <button class="detail-button" type="button" (click)="addCurrentProductToCart()">
+        Add to cart
+      </button>
+      <a class="detail-secondary" routerLink="/cart">Review cart</a>
+    </div>
+  </div>
+</section>
+
+<ng-template #missingProduct>
+  <p class="detail-missing">{{ errorMessage }}</p>
+</ng-template>

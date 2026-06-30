@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" routerLink="/">
+      <span class="brand-kicker">Angular Fundamentals</span>
+      <span class="brand-title">MyStore Atelier</span>
+    </a>
+
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Products</a>
+      <a routerLink="/cart" routerLinkActive="active" class="cart-link">
+        Cart
+        <span class="cart-badge" *ngIf="itemCount$ | async as itemCount">
+          {{ itemCount }}
+        </span>
+      </a>
+    </nav>
+  </div>
+</header>

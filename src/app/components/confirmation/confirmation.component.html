@@ -1,0 +1,21 @@
+<section class="confirmation-container" *ngIf="confirmation; else missingOrder">
+  <div class="confirmation-items">
+    <p class="confirmation-overline">Order confirmed</p>
+    <h1 class="confirmation-header">Thanks, {{ confirmation.fullName }}.</h1>
+    <p class="confirmation-item">
+      We are preparing {{ confirmation.itemCount }} item(s) for delivery to {{ confirmation.address }}.
+    </p>
+    <p class="confirmation-item">Final total: {{ confirmation.total | currency }}</p>
+    <p class="confirmation-item">Card ending in {{ confirmation.creditCardLastFour }}</p>
+    <a class="confirmation-link" routerLink="/">Continue shopping</a>
+  </div>
+</section>
+
+<ng-template #missingOrder>
+  <section class="confirmation-container">
+    <div class="confirmation-items">
+      <h1 class="confirmation-header">No order to confirm yet.</h1>
+      <a class="confirmation-link" routerLink="/">Return to the catalog</a>
+    </div>
+  </section>
+</ng-template>

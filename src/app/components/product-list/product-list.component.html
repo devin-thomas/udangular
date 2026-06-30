@@ -1,0 +1,27 @@
+<section class="catalog-shell">
+  <div class="catalog-intro">
+    <p class="catalog-kicker">Curated goods for the Angular final project</p>
+    <h1>Shop a small catalog, fill your cart, and finish checkout without leaving the page.</h1>
+    <p class="catalog-copy">
+      This build uses Angular routing, template-driven forms, shared cart state, and JSON-backed product data
+      to recreate the core flow of a polished e-commerce storefront.
+    </p>
+  </div>
+
+  <p *ngIf="errorMessage" class="status-card">{{ errorMessage }}</p>
+
+  <div class="product-container" *ngIf="products.length; else loadingState">
+    <ul class="product-index">
+      <li *ngFor="let product of products">
+        <app-product-item
+          [product]="product"
+          (addToCart)="onAddToCart($event)">
+        </app-product-item>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<ng-template #loadingState>
+  <p class="status-card">Loading products...</p>
+</ng-template>

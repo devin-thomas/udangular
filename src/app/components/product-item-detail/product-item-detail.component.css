@@ -1,25 +1,118 @@
 img {
   border-radius: 10px;
-  width: 320px;
+  width: min(100%, 420px);
+  box-shadow: var(--shadow);
 }
 
 .select-input {
-  width: 108px; 
+  width: 108px;
   margin-bottom: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgba(36, 49, 43, 0.2);
+  border-radius: 12px;
+  background: #fffdf9;
 }
 
 .detail-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 64px;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 64px auto 0;
+  padding: 36px;
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .detail-item {
-  margin-left: 128px;
-  margin-right: 128px;
+  max-width: 420px;
 }
 
 .back-link {
-  margin-top: 8px;
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--brand);
+}
+
+.detail-price {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-item h1 {
+  margin: 10px 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink-strong);
+}
+
+.detail-description {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.detail-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.detail-button,
+.detail-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.detail-button {
+  border: 0;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-deep) 100%);
+  color: #fffaf2;
+  font-weight: 700;
+}
+
+.detail-secondary {
+  border: 1px solid rgba(36, 49, 43, 0.16);
+  background: #fffdf9;
+  color: var(--ink-strong);
+}
+
+.detail-missing {
+  width: fit-content;
+  margin: 80px auto 0;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 860px) {
+  .detail-container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .detail-item {
+    max-width: none;
+  }
+
+  .detail-actions {
+    flex-direction: column;
+  }
 }

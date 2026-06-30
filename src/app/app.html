@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<main class="app-shell">
+  <p *ngIf="feedbackMessage" class="feedback-banner" role="status" aria-live="polite">
+    {{ feedbackMessage }}
+  </p>
+
+  <router-outlet></router-outlet>
+</main>

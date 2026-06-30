@@ -1,0 +1,25 @@
+<article class="product-card">
+  <a [routerLink]="['/products', product.id]" class="product-link">
+    <img [src]="product.url" [alt]="product.name" class="product-image">
+  </a>
+
+  <div class="product-container">
+    <p class="product-price">{{ product.price | currency }}</p>
+    <a [routerLink]="['/products', product.id]" class="product-name">{{ product.name }}</a>
+    <p class="product-description">{{ product.description }}</p>
+
+    <label class="field-label" [for]="'quantity-' + product.id">Quantity</label>
+    <input
+      class="select-input"
+      [id]="'quantity-' + product.id"
+      type="number"
+      min="1"
+      max="10"
+      [(ngModel)]="quantity"
+      (ngModelChange)="onQuantityChange($event)">
+
+    <button class="action-button" type="button" (click)="submitAddToCart()">
+      Add to cart
+    </button>
+  </div>
+</article>

@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(17, 126, 99, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(232, 170, 73, 0.24), transparent 24%),
+    linear-gradient(180deg, #f7f2e8 0%, #f0ebdd 100%);
+  color: #24312b;
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #177a63;
+  --brand-deep: #0d5b49;
+  --accent: #d99832;
+  --surface: rgba(255, 251, 244, 0.92);
+  --surface-strong: #fffdf8;
+  --border: rgba(36, 49, 43, 0.12);
+  --ink: #44524a;
+  --ink-strong: #21302a;
+  --shadow: 0 20px 40px rgba(36, 49, 43, 0.12);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}

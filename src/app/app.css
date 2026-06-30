@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: calc(100vh - 88px);
+  padding: 0 24px 48px;
+}
+
+.feedback-banner {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  max-width: 560px;
+  margin: 16px auto 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(14, 90, 74, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 248, 235, 0.95);
+  box-shadow: 0 12px 28px rgba(38, 45, 40, 0.12);
+  color: var(--ink-strong);
+  text-align: center;
+}
